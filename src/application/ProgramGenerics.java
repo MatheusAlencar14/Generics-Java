@@ -10,7 +10,7 @@ public class ProgramGenerics {
 
         Scanner sc = new Scanner(System.in);
 
-        PrintService ps = new PrintService();
+        PrintService<Integer> ps = new PrintService<>();
 
         System.out.println("Quantos valores gostaria de digitar?");
         int n = sc.nextInt();

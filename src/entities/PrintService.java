@@ -4,15 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-public class PrintService {
+public class PrintService<T> {
 
-    private List<Integer> list = new ArrayList<>();
+    private List<T> list = new ArrayList<>();
 
-    public void addValue(Integer value) {
+    public void addValue(T value) {
         list.add(value);
     }
 
-    public Integer first() {
+    public T first() {
         if (list.isEmpty()) {
             throw new IllegalStateException("A lista está vazia!");
         } return list.get(0);
