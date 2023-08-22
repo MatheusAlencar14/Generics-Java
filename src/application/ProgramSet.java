@@ -2,15 +2,16 @@ package application;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class ProgramSet {
 
     public static void main(String[] args) {
 
-        //HashSet é mais rápido, mas não ordena os elementos.
-        Set<String> set = new HashSet<>();
+        //TreeSet é mais lento, mas ordena os elementos.
+        Set<String> set = new TreeSet<>();
 
-        set.add("TV");
+        set.add("Televisão");
         set.add("Notebook");
         set.add("Tablet");
         set.add("Iphone");
