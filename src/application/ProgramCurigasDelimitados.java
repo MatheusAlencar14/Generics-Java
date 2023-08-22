@@ -18,7 +18,7 @@ public class ProgramCurigasDelimitados {
         printList(myObjects);
 
     }
-    
+
     public static void copy(List<? extends Number> source, List<? super Number> destiny) {
         for (Number n : source) {
             destiny.add(n);
