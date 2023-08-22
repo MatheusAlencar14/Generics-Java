@@ -7,15 +7,16 @@ public class ProgramCurigasDelimitados {
 
     public static void main(String[] args) {
 
-        List<Integer> intList = new ArrayList<Integer>();
-        intList.add(10);
-        intList.add(5);
+        List<Object> objList = new ArrayList<Object>();
+        objList.add("Matheus");
+        objList.add("Maria");
 
-        List<? extends Number> list = intList;
+        List<? super Number> list = objList;
 
-        Number x = list.get(0);
+        list.add(10);
+        list.add(17.02);
 
-        //Com 'extends' não é possível adicionar um novo valor à lista
-        //list.add(20);  (acontece um erro)
+        //Com 'super' não é possível dar um get na lista
+        //Number x = list.get(0);  (acontece um erro)
     }
 }
