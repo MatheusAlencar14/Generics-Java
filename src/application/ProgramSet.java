@@ -1,6 +1,7 @@
 package application;
 
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -8,8 +9,8 @@ public class ProgramSet {
 
     public static void main(String[] args) {
 
-        //TreeSet é mais lento, mas ordena os elementos.
-        Set<String> set = new TreeSet<>();
+        //LinkedHashSet não tão rápido, mas mantém a ordem que os elementos foram inseridos.
+        Set<String> set = new LinkedHashSet<>();
 
         set.add("Televisão");
         set.add("Notebook");
