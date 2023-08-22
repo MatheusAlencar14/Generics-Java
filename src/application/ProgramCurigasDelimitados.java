@@ -1,22 +1,34 @@
 package application;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class ProgramCurigasDelimitados {
 
     public static void main(String[] args) {
 
-        List<Object> objList = new ArrayList<Object>();
-        objList.add("Matheus");
-        objList.add("Maria");
+        List<Integer> myInts = Arrays.asList(1, 3, 5, 7, 9);
+        List<Double> myDoubles = Arrays.asList(17.02, 10.09, 23.12);
+        List<Object> myObjects = new ArrayList<Object>();
 
-        List<? super Number> list = objList;
+        copy(myInts,myObjects);
+        printList(myObjects);
+        copy(myDoubles, myObjects);
+        printList(myObjects);
 
-        list.add(10);
-        list.add(17.02);
+    }
+    
+    public static void copy(List<? extends Number> source, List<? super Number> destiny) {
+        for (Number n : source) {
+            destiny.add(n);
+        }
+    }
 
-        //Com 'super' não é possível dar um get na lista
-        //Number x = list.get(0);  (acontece um erro)
+    public static void printList (List<?> list) {
+        for (Object obj : list) {
+            System.out.print(obj + " ");
+        }
+        System.out.println();
     }
 }
